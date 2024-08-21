@@ -9,11 +9,11 @@ pipeline {
         stage('Checkout SCM'){
             steps{
                 script{
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yeshwanthlm/EKS-Terraform-Jenkins.git']])
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/kosurumuniraja/EKS-Terraform-Jenkins-POC.git']])
                 }
             }
         }
-        stage('Initializing Terraform'){
+    stage('Initializing Terraform'){
             steps{
                 script{
                     dir('terraform'){
@@ -51,4 +51,5 @@ pipeline {
             }
         }
     }
+    
 }
